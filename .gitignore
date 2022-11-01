@@ -2,6 +2,8 @@
 summarizeApp
 #ignore fine-tuning
 test_trainer/
+#ignore model directory
+model/
 
 #ignore pytorch artifacts
 data
