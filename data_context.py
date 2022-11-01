@@ -2,15 +2,16 @@
 
 from logic.data_query import download_data, dataset_sampler
 from logic.data_setup import available_characters, context_builder
-from logic.gpt_model_finetune import fine_tune_model
+
+from sklearn.model_selection import train_test_split
 
 
-def main():
+def data_setup():
     """Function to collect user input at desired intervals and return outputs"""
 
     # show a welcome message
     print(
-        "\nWelcome to this Hugging Face GPT-Medium model trainer. \nIt will give you step-by-step prompts to fine-tune a model on a dataset you specify. \nA couple things to note: spelling counts, and you need to use Hugging Face to accomplish this. \nAt the end, we'll push the final model back to Hugging Face, so make sure you have a token set up."
+        "\nWelcome to this Hugging Face GPT-Medium model trainer. \nIt will give you step-by-step prompts to prepare your data for fine-tuning. \nA couple things to note: spelling counts, and you need to use Hugging Face to accomplish this."
     )
 
     # Ask user to define the location of the data on Hugging Face
@@ -48,24 +49,25 @@ def main():
         # send the character, character column, quote column, and df to the context builder
         context_df = context_builder(character, speaker_col, quote_col, df)
 
-        # ask the user what they would like the model to be called
-        model_name = input("\nPlease enter the name you want to use for the model: ")
+        # print a quick sample and confirm it looks right
+        print(f"\nHere is a sample of the context: \n{context_df}")
+        context_correct = input("\nDoes the context look correct? (y/n): ")
 
-        # ask the user what Hugging Face repo they would like to use
-        repo_name = input(
-            "\nPlease enter the name of the Hugging Face repo you would like to use: "
-        )
+        # if the context is correct, return the context df
+        if context_correct == "y":
 
-        # send the context_df, model_name, repo_name, and token to the model trainer
-        model_tune = fine_tune_model(context_df, model_name, repo_name)
+            trn_df, val_df = train_test_split(context_df, test_size=0.2)
 
-        # show the user the model training results
-        print(f"\nHere are the model training results: \n{model_tune}")
+            return trn_df, val_df
+
+        # if the context is not correct, return to the beginning of the function
+        else:
+            data_setup()
 
     # If the data is not correct, exit the program
     else:
-        pass
+        data_setup()
 
 
 if __name__ == "__main__":
-    main()
+    data_setup()

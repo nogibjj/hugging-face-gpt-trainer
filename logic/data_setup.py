@@ -31,7 +31,6 @@ def context_builder(character, character_col, line_col, quotes_df):
     # make an empty dataframe to hold the quotes and context
     quotes_context_df = pd.DataFrame(
         columns=[
-            "character",
             "quote",
             "context/0",
             "context/1",
@@ -44,22 +43,17 @@ def context_builder(character, character_col, line_col, quotes_df):
 
     # iterate through the quotes dataframe and add the quotes and context to the quotes_context_df starting with row 7
     for i in range(7, len(quotes_df)):
+        context_df = pd.DataFrame()
         # if the character in the row matches the character we're looking for
         if quotes_df[character_col][i] == character:
             # add the character, quote, and context to the quotes_context_df
-            quotes_context_df = quotes_context_df.append(
-                {
-                    "character": quotes_df[character_col][i],
-                    "quote": quotes_df[line_col][i],
-                    "context/0": quotes_df[line_col][i - 1],
-                    "context/1": quotes_df[line_col][i - 2],
-                    "context/2": quotes_df[line_col][i - 3],
-                    "context/3": quotes_df[line_col][i - 4],
-                    "context/4": quotes_df[line_col][i - 5],
-                    "context/5": quotes_df[line_col][i - 6],
-                },
-                ignore_index=True,
-            )
+            context_df["quote"] = [quotes_df[line_col][i]]
+            context_df["context/0"] = [quotes_df[line_col][i - 1]]
+            context_df["context/1"] = [quotes_df[line_col][i - 2]]
+            context_df["context/2"] = [quotes_df[line_col][i - 3]]
+            context_df["context/3"] = [quotes_df[line_col][i - 4]]
+            context_df["context/4"] = [quotes_df[line_col][i - 5]]
+            context_df["context/5"] = [quotes_df[line_col][i - 6]]
 
     # return the quotes_context_df
-    return quotes_context_df
+    return context_df
