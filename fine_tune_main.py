@@ -33,7 +33,6 @@ from fine_tune_data_process import data_setup
 from fine_tune_arg_setup import arg_define
 
 
-
 try:
     from torch.utils.tensorboard import SummaryWriter
 except ImportError:
@@ -702,6 +701,11 @@ def main():
 
     model.push_to_hub(repo_id=repo_name)  # push the model to huggingface hub
     tokenizer.push_to_hub(repo_id=repo_name)  # push the tokenizer to huggingface hub
+
+    # print a success message with a receipt of what happened
+    print(
+        f"\n**********************************************\n**********************************************\nModel {model_name} was successfully uploaded to {repo_name}.\n**********************************************\n**********************************************"
+    )
 
     return results
 

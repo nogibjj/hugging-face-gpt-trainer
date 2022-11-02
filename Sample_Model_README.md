@@ -1,26 +1,19 @@
-# Welcome
+---
+language: en
+tags:
+- conversational
 
-You've found your way to a pretty funny little project. Below is a visual description of what happens here, and there is also a video.
+license: cc
+---
 
-Here's the gist:
 
-* We take a specified gnerative text model, such as GPT-2
+# GPT-2
 
-* We define a dataset and do some transformations
+This model is based on a GPT-2 model which was fine-tuned on a Hugging Face dataset. It is intended largely as an illustrative example and is not intended to be used for any serious purpose. It's trained on a movie script for goodness' sake.
 
-* We fine-tune the model on the dataset
-
-* We push the model to the Hugging Face model repository
-
-## Contents
-
-There are a few quick things to note about this repository:
-
-* The main files you'll need are in the main directory and begin 'fine_tune_'. The place to start is 'fine_tune_main.py' and once you're done fine-tuning you can use 'fine_tune_test_chat.py' to chat with your model.
-
-* The 'cached', 'model', and 'runs' directories contain information used to fine-tune the model. These directories are included in the '.gitignore' file.
-
-* 'utils' has a few helpful tools to poke around the GPU environment this codespace relies upon.
+Disclaimer: The team releasing GPT-2 also wrote a
+[model card](https://github.com/openai/gpt-2/blob/master/model_card.md) for their model. Content from this model card
+has been written by the Hugging Face team to complete the information they provided and give specific examples of bias.
 
 ## Acknowledgements
 
@@ -35,14 +28,6 @@ There are several sources of inspiration and insight for the project that spawne
 * From a lineage standpoint, it looks like Nathan Cooper kicked this whole thing off with this [notebook.](https://github.com/ncoop57/i-am-a-nerd/blob/master/_notebooks/2020-05-12-chatbot-part-1.ipynb)
 
 * I'd be remiss if I also didn't mention Hugging Face's own support [documentation](https://huggingface.co/transformers/v2.0.0/examples.html#gpt-2-gpt-and-causal-language-modeling) and team. All around great.
-
-## GPT-2 Model Information
-
-This model is based on a GPT-2 model which was fine-tuned on a Hugging Face dataset. It is intended largely as an illustrative example and is not intended to be used for any serious purpose. It's trained on a movie script for goodness' sake.
-
-Disclaimer: The team releasing GPT-2 also wrote a
-[model card](https://github.com/openai/gpt-2/blob/master/model_card.md) for their model. Content from this model card
-has been written by the Hugging Face team to complete the information they provided and give specific examples of bias.
 
 ## Model description
 
