@@ -1,4 +1,4 @@
-name: CI
+name: HF Fine-Tune CI
 on:
   push:
     branches: [ "gpt-fine-tune" ]
