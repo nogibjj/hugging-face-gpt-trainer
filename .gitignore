@@ -4,6 +4,8 @@ summarizeApp
 test_trainer/
 #ignore model directory
 model/
+cached/
+runs/
 
 #ignore pytorch artifacts
 data
