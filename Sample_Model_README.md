@@ -21,7 +21,7 @@ There are several sources of inspiration and insight for the project that spawne
 
 * The [Microsoft DialoGPT-Medium](https://huggingface.co/microsoft/DialoGPT-medium?text=Hi.) model page was very insightful for getting stated.
 
-* Lynn Zheng [r3dhummingbird](https://huggingface.co/r3dhummingbird/DialoGPT-medium-joshua?text=Hey+my+name+is+Thomas%21+How+are+you%3F) put together one heck of an awesome tutorial on how to fine-tune GPT-2 for conversational purposes. I used her tutorial as a starting point for this project. Check out the [Github repo here](https://github.com/RuolinZheng08/twewy-discord-chatbot)
+* Lynn Zheng [r3dhummingbird](https://huggingface.co/r3dhummingbird/DialoGPT-medium-joshua?text=Hey+my+name+is+Thomas%21+How+are+you%3F) put together one heck of an awesome tutorial on how to fine-tune GPT-2 for conversational purposes. I used her tutorial as a starting point for this project. Check out the [Github repo here.](https://github.com/RuolinZheng08/twewy-discord-chatbot)
 
 * [This article](https://towardsdatascience.com/make-your-own-rick-sanchez-bot-with-transformers-and-dialogpt-fine-tuning-f85e6d1f4e30) was also very insightful. Written by Rostyslav Neskorozhenyi.
 
