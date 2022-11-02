@@ -27,6 +27,8 @@ There are several sources of inspiration and insight for the project that spawne
 
 * From a lineage standpoint, it looks like Nathan Cooper kicked this whole thing off with this [notebook.](https://github.com/ncoop57/i-am-a-nerd/blob/master/_notebooks/2020-05-12-chatbot-part-1.ipynb)
 
+* Noah Gift figured out a few of the big pieces in [this repository.](https://github.com/nogibjj/hugging-face-tutorial-practice)
+
 * I'd be remiss if I also didn't mention Hugging Face's own support [documentation](https://huggingface.co/transformers/v2.0.0/examples.html#gpt-2-gpt-and-causal-language-modeling) and team. All around great.
 
 ## Model description
