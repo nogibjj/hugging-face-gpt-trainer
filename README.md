@@ -1,3 +1,5 @@
+[![HF Fine-Tune CI](https://github.com/nogibjj/hugging-face-gpt-trainer/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/hugging-face-gpt-trainer/actions/workflows/cicd.yml)
+
 # Welcome
 
 You've found your way to a pretty funny little project. Below is a visual description of what happens here, and there is also a video.
