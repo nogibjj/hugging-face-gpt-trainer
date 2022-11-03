@@ -66,8 +66,6 @@ You can always chat with the model directly on the Hugging Face website. Just cl
 
 If you want to use the model in your own project, I recommend you train it better using much more data.
 
-To access the GitHub repository I used to train this model, click [here](https://github.com/nogibjj/hugging-face-gpt-trainer/tree/gpt-fine-tune)
-
 ## Fine-tuning data
 
 The script to generate this model takes a Hugging Face data set in this approximate format:
