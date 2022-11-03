@@ -65,6 +65,6 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(local_model)
 
 if __name__ == "__main__":
-    model_name, local_model, character = model_define()
+
     # call the function
     chat(character)
