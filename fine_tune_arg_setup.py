@@ -16,6 +16,11 @@ def arg_define():
         repo_name (str): The name of the repo to store the fine tuned model.
     """
 
+    # show a welcome message
+    print(
+        "\n>>> Welcome to this Hugging Face GPT-Medium model trainer. \nIt will give you step-by-step prompts to prepare your data for fine-tuning. \nA couple things to note: spelling counts, and you need to use Hugging Face to accomplish this."
+    )
+
     # define the model name
     model_name = input("\n\n>>> What model would you like to fine tune? ")
 

@@ -88,11 +88,6 @@ def context_builder(character, character_col, line_col, quotes_df):
 def data_setup():
     """Function to collect user input at desired intervals and return outputs"""
 
-    # show a welcome message
-    print(
-        "\n>>> Welcome to this Hugging Face GPT-Medium model trainer. \nIt will give you step-by-step prompts to prepare your data for fine-tuning. \nA couple things to note: spelling counts, and you need to use Hugging Face to accomplish this."
-    )
-
     # Ask user to define the location of the data on Hugging Face
     data_pathway = input(
         "\n>>> Please enter the location of the data on Hugging Face in this format: username/datasetname: "
