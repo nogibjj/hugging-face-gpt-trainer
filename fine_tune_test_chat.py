@@ -14,7 +14,7 @@ def model_define():
     # ask the user for the character name
     character = input("Enter the character name: ")
 
-    return model_name, local_model, character
+    return local_model, character
 
 
 def chat(character):
@@ -61,9 +61,9 @@ def chat(character):
 ##### Specify model and tokenizer here #####
 ############################################
 
-model_name, local_model, character = model_define()
+localmodel, speaker = model_define()
 
-tokenizer = AutoTokenizer.from_pretrained(local_model)
-model = AutoModelForCausalLM.from_pretrained(local_model)
+tokenizer = AutoTokenizer.from_pretrained(localmodel)
+model = AutoModelForCausalLM.from_pretrained(localmodel)
 
-chat(character)
+chat(speaker)
