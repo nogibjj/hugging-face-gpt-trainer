@@ -2,7 +2,7 @@
 
 # Welcome
 
-You've found your way to a pretty funny little project. Below is a visual description of what happens here, and there is also a video.
+You've found your way to a pretty funny little project. Below is a visual description of what happens here, and there is [also a video.](https://youtu.be/x7Pnf6SNRYA)
 
 <img src="https://github.com/nogibjj/hugging-face-gpt-trainer/blob/80658904642864fe58b10079766bf3d3b4f4b234/utils/Reduced_Workflow.png" alt="Workflow" width="700"/>
 
