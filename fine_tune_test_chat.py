@@ -9,8 +9,6 @@ import torch
 
 
 def model_define():
-    # ask the user for the model name
-    model_name = input("Enter the model name: ")
     # ask the user for the local model name
     local_model = input("Enter the local model name: ")
     # ask the user for the character name
@@ -59,12 +57,13 @@ def chat(character):
         )
 
 
+############################################
+##### Specify model and tokenizer here #####
+############################################
+
 model_name, local_model, character = model_define()
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(local_model)
 model = AutoModelForCausalLM.from_pretrained(local_model)
 
-if __name__ == "__main__":
-
-    # call the function
-    chat(character)
+chat(character)

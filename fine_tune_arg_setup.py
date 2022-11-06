@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """This function asks the user to specify the model they want to use, its tokenizer, and the output direectory/repo they want to use when fine tuning."""
 
 

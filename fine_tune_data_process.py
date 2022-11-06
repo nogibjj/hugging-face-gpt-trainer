@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """This is the data loading and processing function for the trainer"""
 
 import pandas as pd
