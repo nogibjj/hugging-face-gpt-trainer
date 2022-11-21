@@ -13,7 +13,7 @@ format:
 	black *.py 
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py 
+	pylint --disable=R,C,no-value-for-parameter,no-member,redefined-outer-name,logging-format-interpolation,attribute-defined-outside-init,protected-access,raise-missing-from --ignore-patterns=test_.*?py *.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile

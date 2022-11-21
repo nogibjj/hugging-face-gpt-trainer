@@ -6,7 +6,6 @@
 import os
 import glob
 import logging
-import os
 import pickle
 import random
 import re
@@ -59,7 +58,7 @@ df_trn, df_val = data_setup()
 # These functions below continue with that dataset by formatting it for the tokenizer
 
 
-def construct_conv(row, tokenizer, eos=True):
+def construct_conv(row, tokenizer):
     flatten = lambda l: [item for sublist in l for item in sublist]
     conv = list(reversed([tokenizer.encode(x) + [tokenizer.eos_token_id] for x in row]))
     conv = flatten(conv)
@@ -567,7 +566,7 @@ def evaluate(
     result = {"perplexity": perplexity}
 
     output_eval_file = os.path.join(eval_output_dir, prefix, "eval_results.txt")
-    with open(output_eval_file, "w") as writer:
+    with open(output_eval_file, "w", encoding="utf-8") as writer:
         logger.info("***** Eval results {} *****".format(prefix))
         for key in sorted(result.keys()):
             logger.info("  %s = %s", key, str(result[key]))
